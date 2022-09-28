@@ -1,0 +1,27 @@
+.yoga-container{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    
+    
+}
+.yoga-info{
+    background-color: #D9F8C4;
+    padding: 10px;
+}
+.yoga-img{
+    height: 50px;
+    border-radius: 100%;
+}
+.add-break{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: lightgrey;
+    border-radius: 10px;
+}
+.add-break p{
+    border-radius: 30px;
+    background-color: white;
+    padding: 10px;
+}
