@@ -15,10 +15,17 @@
     background-color: #D9F8C4;
     padding: 10px;
 }
+.name-address p{
+    margin: 0;
+}
+.name-address h4{
+    margin: 0;
+}
 .my-info{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    margin: 0;
 }
 .yoga-img{
     height: 50px;  

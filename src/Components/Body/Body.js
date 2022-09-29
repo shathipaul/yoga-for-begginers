@@ -55,7 +55,7 @@ const Body = () => {
                 <div>
                 <img className='yoga-img' src={logo} alt="" />
                 </div>
-                <div>
+                <div className='name-address'>
                 <h4>Shathi Paul</h4>
                 <p>Dhaka, Bangladesh</p>
                 </div>
@@ -110,7 +110,13 @@ const Body = () => {
             </div>
             <div className='qa'>
             <h4>What is the function of useEffect other then loading data?</h4>
-            <p>The useEffect Hook allows you to perform side effects in your components. Some examples of side effects are: fetching data, directly updating the DOM, and timers. useEffect accepts two arguments.</p>
+            <p>By using UseEffect hook, we tell React that our component needs to do something after render. React will remember the function we passed, and call it later after performing the DOM updates. We can use use useEffect to:
+                    Running once on mount: fetch API data
+                    Running on state change: validating input field
+                    Running on state change: live filtering
+                    Running on state change: trigger animation on new array value
+                    Running on props change: update paragraph list on fetched API data update
+                    Running on props change: updating fetched API data to get BTC updated price</p>
             </div>
             </div>
             <ToastContainer />
