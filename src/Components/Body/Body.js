@@ -109,14 +109,8 @@ const Body = () => {
             <strong>Props:</strong> Props are read-only components. It is an object which stores the value of attributes of a tag and work similar to the HTML attributes. It allows passing data from one component to other components. It is similar to function arguments and can be passed to the component the same way as arguments passed in a function. Props are immutable so we cannot modify the props from inside the component.</p>
             </div>
             <div className='qa'>
-            <h4>What is the function of useEffect other then loading data?</h4>
-            <p>By using UseEffect hook, we tell React that our component needs to do something after render. React will remember the function we passed, and call it later after performing the DOM updates. We can use use useEffect to:
-                    Running once on mount: fetch API data
-                    Running on state change: validating input field
-                    Running on state change: live filtering
-                    Running on state change: trigger animation on new array value
-                    Running on props change: update paragraph list on fetched API data update
-                    Running on props change: updating fetched API data to get BTC updated price</p>
+            <h4>What is the Usages of useEffect other then loading data?</h4>
+            <p>Understanding how the useEffect Hook works is one of the most important concepts for mastering React today. If you have been working with React for several years, it is especially crucial to understand how working with useEffect differs from working with the lifecycle methods of class-based components. In fact, it is a wholesale shift in mindset!</p>
             </div>
             </div>
             <ToastContainer />

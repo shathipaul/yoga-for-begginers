@@ -25,7 +25,6 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin: 0;
 }
 .yoga-img{
     height: 50px;  
@@ -47,12 +46,6 @@
     font-weight: 500;
     
 }
-/* .add-break p{
-    border-radius: 30px;
-    background-color: white;
-    padding: 10px;
-    font-weight: 500;
-} */
 .exercise-detail{
     display: flex;
     align-items: center;
@@ -71,18 +64,17 @@
     margin-top: 10px;
     font-weight: 700;
 }
-
+ /* Q/A Style */
 .qa-container{
     margin: 50px;
 }
-
 .qa{
     border: 1px solid #7f8b4b;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 10px;
 }
-
+/* Responsive */
 @media only screen and (max-width: 992px){
     .body-container{
         display: grid;
