@@ -8,9 +8,13 @@ import './Body.css'
 
 const Body = () => {
     const [yogas, setYogas] = useState([]);
-    // const [time, setTime] = useState(0);
-    // const [break, setBreak] = useState(0);
+    const [time, setTime] = useState(0);
+    const [brk, setBrk] = useState(0);
 
+    const addYogaTime = (e) =>{
+        setTime(time + e )
+    }
+    
     useEffect( () =>{
         fetch('data.json')
         .then(res => res.json())
@@ -20,15 +24,16 @@ const Body = () => {
     const notify = () =>{
         toast('Congratulation!!! You have completed your Yoga.')
     }
-
-    // const addYogaTime = () =>{
-    //     console.log('time is set')
-    // }
-
-    // const addBreakTime = () =>{
-    //     console.log('set break')
-    // }
-
+    const storeBrkTime = localStorage.getItem('break time')
+    const handlerBreak = (e) =>{
+        console.log(e.target.innerText)
+        const brkTime = e.target.innerText
+        const storeBrkTime = localStorage.getItem('break time')
+        localStorage.setItem('break time', brkTime)
+        console.log(localStorage.getItem('break time'));
+        setBrk(storeBrkTime);
+    }
+    
     return (
     
        <div>
@@ -39,6 +44,7 @@ const Body = () => {
                 yogas.map(yoga => <Yoga
                 key={yoga.id}
                 yoga={yoga}
+                addYogaTime={addYogaTime}
                 ></Yoga>)
             }
 
@@ -58,11 +64,11 @@ const Body = () => {
                  <div>
                  <h3>Add A Break</h3>
                  <div className='add-break'>
-                <p><small>2m</small></p>
-                <p><small>3m</small></p>
-                <p><small>5m</small></p>
-                <p><small>7m</small></p>
-                <p><small>9m</small></p>
+                <button onClick={(e) => handlerBreak(e)} className='btn-break'>2m</button>
+                <button onClick={(e) => handlerBreak(e)} className='btn-break'>3m</button>
+                <button onClick={(e) => handlerBreak(e)} className='btn-break'>5m</button>
+                <button onClick={(e) => handlerBreak(e)} className='btn-break'>7m</button>
+                <button onClick={(e) => handlerBreak(e)} className='btn-break'>9m</button>
                 </div>
                  </div>
                 {/* Exercise Details Section */}
@@ -74,7 +80,7 @@ const Body = () => {
                         <h4>Exercise Time</h4>
                     </div>
                     <div>
-                        <p>0 Minutes</p>
+                        <p>{time} Minutes</p>
                     </div>
                     </div>
                     {/* Break Time */}
@@ -83,7 +89,7 @@ const Body = () => {
                         <h4>Break Time</h4>
                     </div>
                     <div>
-                        <p> 0 Minutes</p>
+                        <p>{storeBrkTime}</p>
                     </div>
                     </div>
                 </div>

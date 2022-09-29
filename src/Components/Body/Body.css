@@ -29,14 +29,23 @@
     justify-content: space-between;
     background-color: lightgrey;
     border-radius: 10px;
-    padding: 0 10px ;
+    padding: 5px 10px ;
+    
 }
-.add-break p{
+.btn-break{
+    border: none;
     border-radius: 30px;
     background-color: white;
     padding: 10px;
     font-weight: 500;
+    
 }
+/* .add-break p{
+    border-radius: 30px;
+    background-color: white;
+    padding: 10px;
+    font-weight: 500;
+} */
 .exercise-detail{
     display: flex;
     align-items: center;
@@ -66,3 +75,29 @@
     padding: 20px;
     margin-bottom: 10px;
 }
+
+@media only screen and (max-width: 992px){
+    .body-container{
+        display: grid;
+        grid-template-columns: 2fr 1fr;  
+    }
+    .yoga-container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+} 
+@media only screen and (max-width: 768px){
+    .body-container{
+        display: grid;
+        grid-template-columns: 1fr;  
+    }
+    .yoga-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .yoga-container img {
+        /* height: 200px; */
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+} 
