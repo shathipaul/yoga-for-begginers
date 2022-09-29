@@ -3,7 +3,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import logo from '../../images/logo.png'
 import Yoga from '../Yoga/Yoga';
-
 import './Body.css'
 
 const Body = () => {
@@ -65,11 +64,11 @@ const Body = () => {
                  <div>
                  <h3>Add A Break</h3>
                  <div className='add-break'>
-                <button onClick={(e) => handlerBreak(e)} className='btn-break'>2m</button>
-                <button onClick={(e) => handlerBreak(e)} className='btn-break'>3m</button>
-                <button onClick={(e) => handlerBreak(e)} className='btn-break'>5m</button>
-                <button onClick={(e) => handlerBreak(e)} className='btn-break'>7m</button>
-                <button onClick={(e) => handlerBreak(e)} className='btn-break'>9m</button>
+                <button onClick={(e) => handlerBreak(e)} className='btn-break'>2</button>
+                <button onClick={(e) => handlerBreak(e)} className='btn-break'>3</button>
+                <button onClick={(e) => handlerBreak(e)} className='btn-break'>5</button>
+                <button onClick={(e) => handlerBreak(e)} className='btn-break'>7</button>
+                <button onClick={(e) => handlerBreak(e)} className='btn-break'>9</button>
                 </div>
                  </div>
                 {/* Exercise Details Section */}
@@ -90,7 +89,7 @@ const Body = () => {
                         <h4>Break Time</h4>
                     </div>
                     <div>
-                        <p>{storeBrkTime}</p>
+                        <p>{storeBrkTime} Minutes</p>
                     </div>
                     </div>
                 </div>
