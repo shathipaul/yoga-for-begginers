@@ -1,12 +1,14 @@
 import './App.css';
+import Body from './Components/Body/Body';
 import Header from './Components/Header/Header';
-import Yoga from './Components/Yoga/Yoga';
 
 function App() {
   return (
     <div>
       <Header></Header>
-      <Yoga></Yoga>
+      <Body></Body>
+      
+
     </div>
   );
 }

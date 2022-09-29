@@ -1,27 +1,14 @@
-.yoga-container{
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-    
-    
-}
-.yoga-info{
-    background-color: #D9F8C4;
-    padding: 10px;
-}
-.yoga-img{
-    height: 50px;
-    border-radius: 100%;
-}
-.add-break{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background-color: lightgrey;
+.yoga{
+    border: 1px solid #7f8b4b;
     border-radius: 10px;
-}
-.add-break p{
-    border-radius: 30px;
-    background-color: white;
     padding: 10px;
+    margin: 20px 10px ;
+}
+.yoga-btn{
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    background-color: #7f8b4b;
+    padding: 15px 0;
+    font-weight: 700;
 }

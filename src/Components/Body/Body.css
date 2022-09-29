@@ -1,0 +1,68 @@
+.body-container{
+    display: grid;
+    grid-template-columns: 4fr 1fr;  
+}
+.yoga-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.yoga-container img{
+    height: 200px;
+    width: 320px;
+    border-radius: 10px 10px 0 0;
+}
+.yoga-info{
+    background-color: #D9F8C4;
+    padding: 10px;
+}
+.my-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.yoga-img{
+    height: 50px;  
+}
+.add-break{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: lightgrey;
+    border-radius: 10px;
+    padding: 0 10px ;
+}
+.add-break p{
+    border-radius: 30px;
+    background-color: white;
+    padding: 10px;
+    font-weight: 500;
+}
+.exercise-detail{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: lightgrey;
+    border-radius: 10px;
+    margin-top: 5px;
+    padding: 0 10px;
+}
+.act-btn{
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    background-color: #7f8b4b;
+    padding: 15px 0;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.qa-container{
+    margin: 50px;
+}
+
+.qa{
+    border: 1px solid #7f8b4b;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
