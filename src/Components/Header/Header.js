@@ -11,7 +11,6 @@ const Header = () => {
             <div>
             <h1>Yoga For Beginners</h1>
             </div>
-
         </nav>
     );
 };

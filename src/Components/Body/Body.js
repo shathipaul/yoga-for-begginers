@@ -11,19 +11,20 @@ const Body = () => {
     const [time, setTime] = useState(0);
     const [brk, setBrk] = useState(0);
 
-    const addYogaTime = (e) =>{
-        setTime(time + e )
-    }
-    
     useEffect( () =>{
         fetch('data.json')
         .then(res => res.json())
         .then(data => setYogas(data));
     }, []);
 
+    const addYogaTime = (e) =>{
+        setTime(time + e )
+    } 
+
     const notify = () =>{
         toast('Congratulation!!! You have completed your Yoga.')
     }
+
     const storeBrkTime = localStorage.getItem('break time')
     const handlerBreak = (e) =>{
         console.log(e.target.innerText)
@@ -110,7 +111,7 @@ const Body = () => {
             </div>
             <div className='qa'>
             <h4>What is the Usages of useEffect other then loading data?</h4>
-            <p>Understanding how the useEffect Hook works is one of the most important concepts for mastering React today. If you have been working with React for several years, it is especially crucial to understand how working with useEffect differs from working with the lifecycle methods of class-based components. In fact, it is a wholesale shift in mindset!</p>
+            <p>The Effect Hook lets you perform side effects in function components: This snippet is based on the counter example from the previous page, but we added a new feature to it: we set the document title to a custom message including the number of clicks. Data fetching, setting up a subscription, and manually changing the DOM in React components are all examples of side effects. Whether or not you're used to calling these operations “side effects” (or just “effects”), you've likely performed them in your components before. There are two common kinds of side effects in React components: those that don't require cleanup, and those that do. Let's look at this distinction in more detail.</p>
             </div>
             </div>
             <ToastContainer />
