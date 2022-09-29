@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import logo from '../../images/logo.png'
 import Yoga from '../Yoga/Yoga';
 
@@ -6,7 +8,8 @@ import './Body.css'
 
 const Body = () => {
     const [yogas, setYogas] = useState([]);
-    const [time, setTime] = useState([]);
+    // const [time, setTime] = useState(0);
+    // const [break, setBreak] = useState(0);
 
     useEffect( () =>{
         fetch('data.json')
@@ -14,9 +17,17 @@ const Body = () => {
         .then(data => setYogas(data));
     }, []);
 
-    const yogaTimeSet = () =>{
-        console.log('time is set')
+    const notify = () =>{
+        toast('Congratulation!!! You have completed your Yoga.')
     }
+
+    // const addYogaTime = () =>{
+    //     console.log('time is set')
+    // }
+
+    // const addBreakTime = () =>{
+    //     console.log('set break')
+    // }
 
     return (
     
@@ -76,7 +87,7 @@ const Body = () => {
                     </div>
                     </div>
                 </div>
-                <button className='act-btn'>Activity Completed</button>
+                <button onClick={notify} className='act-btn'>Activity Completed</button>
         </div>
           </div>
           {/* Q/A Section */}
@@ -96,6 +107,7 @@ const Body = () => {
             <p>The useEffect Hook allows you to perform side effects in your components. Some examples of side effects are: fetching data, directly updating the DOM, and timers. useEffect accepts two arguments.</p>
             </div>
             </div>
+            <ToastContainer />
        </div>
     );
 };
